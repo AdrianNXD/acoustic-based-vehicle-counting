@@ -1,0 +1,49 @@
+Generate the first batch of chunks.
+Create output folder ...
+Now processing recording -> 1 ... 
+DONE. There are now 307 chunks.
+Generate the second batch of chunks using an one second offset.
+Output folder already exists. Appending chunks ...
+Now processing recording -> 1 ... 
+DONE. There are now 614 chunks.
+Generate the third batch of chunks using an audio file for data augmentation.
+Output folder already exists. Appending chunks ...
+Now processing recording -> 1 ... 
+DONE. There are now 921 chunks.
+Generate the last batch of chunks with both an one second offset and data augmentation.
+Output folder already exists. Appending chunks ...
+Now processing recording -> 1 ... 
+DONE. There are now 1228 chunks.
+Training will be on device: cuda
+Epoch [1/20] | LR: 0.001000 | Train Loss: 0.5618 | Val Loss: 0.5531 | Precision: 0.8768 | Recall: 0.8345 | F1: 0.8551
+Epoch [2/20] | LR: 0.001000 | Train Loss: 0.2373 | Val Loss: 0.2574 | Precision: 0.8940 | Recall: 0.9310 | F1: 0.9122
+Epoch [3/20] | LR: 0.001000 | Train Loss: 0.1573 | Val Loss: 0.1758 | Precision: 0.8415 | Recall: 0.9517 | F1: 0.8932
+Epoch [4/20] | LR: 0.001000 | Train Loss: 0.1443 | Val Loss: 1.0120 | Precision: 0.3924 | Recall: 0.9931 | F1: 0.5625
+Epoch [5/20] | LR: 0.001000 | Train Loss: 0.1284 | Val Loss: 0.3543 | Precision: 0.7136 | Recall: 0.9793 | F1: 0.8256
+Epoch [6/20] | LR: 0.001000 | Train Loss: 0.1370 | Val Loss: 0.1643 | Precision: 0.9556 | Recall: 0.8897 | F1: 0.9214
+Epoch [7/20] | LR: 0.001000 | Train Loss: 0.1234 | Val Loss: 0.1459 | Precision: 0.9133 | Recall: 0.9448 | F1: 0.9288
+Epoch [8/20] | LR: 0.001000 | Train Loss: 0.1223 | Val Loss: 0.1471 | Precision: 0.9379 | Recall: 0.9379 | F1: 0.9379
+Epoch [9/20] | LR: 0.001000 | Train Loss: 0.1237 | Val Loss: 0.1774 | Precision: 0.9618 | Recall: 0.8690 | F1: 0.9130
+Epoch [10/20] | LR: 0.001000 | Train Loss: 0.0935 | Val Loss: 0.1912 | Precision: 0.9632 | Recall: 0.9034 | F1: 0.9324
+Epoch [11/20] | LR: 0.001000 | Train Loss: 0.0884 | Val Loss: 0.1642 | Precision: 0.9195 | Recall: 0.9448 | F1: 0.9320
+Epoch [12/20] | LR: 0.001000 | Train Loss: 0.1088 | Val Loss: 0.1559 | Precision: 0.9444 | Recall: 0.9379 | F1: 0.9412
+Epoch [13/20] | LR: 0.001000 | Train Loss: 0.0843 | Val Loss: 0.1467 | Precision: 0.9320 | Recall: 0.9448 | F1: 0.9384
+Epoch [14/20] | LR: 0.001000 | Train Loss: 0.1123 | Val Loss: 0.5563 | Precision: 0.9861 | Recall: 0.4897 | F1: 0.6544
+Epoch [15/20] | LR: 0.001000 | Train Loss: 0.1034 | Val Loss: 0.6356 | Precision: 0.5070 | Recall: 0.9931 | F1: 0.6713
+Epoch [16/20] | LR: 0.000500 | Train Loss: 0.0882 | Val Loss: 0.3106 | Precision: 0.9664 | Recall: 0.7931 | F1: 0.8712
+Epoch [17/20] | LR: 0.000500 | Train Loss: 0.0946 | Val Loss: 0.5101 | Precision: 0.9674 | Recall: 0.6138 | F1: 0.7511
+Epoch [18/20] | LR: 0.000500 | Train Loss: 0.0823 | Val Loss: 0.2743 | Precision: 0.9672 | Recall: 0.8138 | F1: 0.8839
+Epoch [19/20] | LR: 0.000500 | Train Loss: 0.0933 | Val Loss: 0.1611 | Precision: 0.9079 | Recall: 0.9517 | F1: 0.9293
+Epoch [20/20] | LR: 0.000250 | Train Loss: 0.0858 | Val Loss: 0.1518 | Precision: 0.9320 | Recall: 0.9448 | F1: 0.9384
+Model training is DONE.
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           0     0.9768    0.9712    0.9740       347
+           1     0.9320    0.9448    0.9384       145
+
+    accuracy                         0.9634       492
+   macro avg     0.9544    0.9580    0.9562       492
+weighted avg     0.9636    0.9634    0.9635       492
