@@ -17,6 +17,8 @@ from sklearn.metrics import precision_score, recall_score, f1_score, confusion_m
 chunk_folder = "chunks"
 samplerate = 48000
 
+validation_size = 0.4
+
 t_labels = pd.read_csv("labels.csv", sep=";", index_col=0)
 
 
@@ -42,7 +44,7 @@ c_labels = gc.generate_chunks(t_labels = t_labels, output_folder = chunk_folder,
 # make sure both datasets contain an equal amount of them.
 c_labels_train, c_labels_val = train_test_split(
     c_labels,
-    test_size    = 0.2,
+    test_size    = validation_size,
     random_state = 42,
     stratify     = c_labels["pass_event"]
 )
