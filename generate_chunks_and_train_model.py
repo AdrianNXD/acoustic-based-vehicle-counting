@@ -299,17 +299,18 @@ def train_model(model, dl_train, dl_val, device, epochs=20, lr=0.001):
 
 model = Conv2D()
 training_results = train_model(model=model, dl_train=dl_train, dl_val=dl_val, device=device, epochs=20, lr=0.001)
+torch.save(model.state_dict(), "trained_model.pth")
 print("Model training is DONE.")
 
 
 
-# Modell in Evaluationsmodus setzen
+# now evaluate the model on the validation data
 model.eval()
 
 all_preds = []
 all_labels = []
 
-# Vorhersagen berechnen
+# calculate the predictions
 with torch.no_grad():
     for images, labels in dl_val:
         images = images.to(device)
@@ -321,14 +322,14 @@ with torch.no_grad():
         all_preds.extend(preds.cpu().numpy())
         all_labels.extend(labels.cpu().numpy())
 
-# Confusion Matrix berechnen
-cm = confusion_matrix(all_labels, all_preds)
-
-# Optional: Classification Report ausgeben
+# print the classification report
 print("\nClassification Report:\n")
 print(classification_report(all_labels, all_preds, digits=4))
 
-# Confusion Matrix visualisieren
+# calculate the confusion matrix
+cm = confusion_matrix(all_labels, all_preds)
+
+# create the confusion matrix plot
 plt.figure(figsize=(6, 5))
 sns.heatmap(
     cm,
@@ -342,7 +343,7 @@ sns.heatmap(
 
 plt.xlabel("MODEL PREDICTION")
 plt.ylabel("LABEL")
-plt.title("Confusion Matrix of Validation Data")
+plt.title("Confusion Matrix on Validation Data")
 plt.tight_layout()
 plt.savefig("confusion_matrix.png")
 plt.show()
